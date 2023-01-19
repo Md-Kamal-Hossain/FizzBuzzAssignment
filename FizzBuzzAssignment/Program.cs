@@ -8,36 +8,35 @@ namespace FizzBuzzAssignment
 	{
 		public static void Main(string[] args)
 		{
-			string input;
-			
-			Console.Write("Enter a Number ");
-			input = Console.ReadLine();
-			try
+
+
+			for (int i = 1; i <= 100; i++)
 			{
-				int result = Int32.Parse(input);
-				if(result% 3==0 && result%5!=0)
-                {
-					Console.WriteLine("Fizz");
-				}
-				else if(result% 5==0&& result%3!=0)
-                {
-					Console.WriteLine("Buzz");
-				}
-				else if (result % 5 == 0 && result%3==0)
+				if (i % 3 == 0 && i % 5 != 0)
 				{
-					Console.WriteLine("FizzBuzz");
+					Console.Write("Fizz" + ",");
+				}
+				else if (i % 5 == 0 && i % 3 != 0)
+				{
+					Console.Write("Buzz" + ",");
+				}
+				else if (i % 5 == 0 && i % 3 == 0)
+				{
+					Console.Write("FizzBuzz" + ",");
 				}
 				else
-                {
-					Console.WriteLine(result);
-                }
-				//Console.WriteLine(result);
+				{
+					Console.Write(i + ",");
+				}
+
+
+
 			}
-			catch (FormatException)
-			{
-				Console.WriteLine($"Unable to parse '{input}'");
-			}
-			
+
+
+
+
+
 		}
 	}
 }
